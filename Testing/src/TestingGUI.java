@@ -22,6 +22,8 @@ public class TestingGUI extends JFrame {
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
+				System.out.println("AAAAA");
+				int b = 0;
 				try {
 					TestingGUI frame = new TestingGUI();
 					frame.setVisible(true);
