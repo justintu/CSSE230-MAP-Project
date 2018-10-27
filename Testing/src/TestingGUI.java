@@ -26,6 +26,7 @@ public class TestingGUI extends JFrame {
 					TestingGUI frame = new TestingGUI();
 					frame.setVisible(true);
 				} catch (Exception e) {
+					System.out.println("test");
 					e.printStackTrace();
 				}
 			}
