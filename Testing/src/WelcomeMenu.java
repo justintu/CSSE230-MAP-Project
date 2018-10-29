@@ -47,7 +47,7 @@ public class WelcomeMenu {
 		frame.getContentPane().setBackground(new Color(255, 255, 224));
 		frame.getContentPane().setLayout(null);
 		frame.setLocationRelativeTo(null);
-
+		
 		JButton btnNewButton = new JButton("Start Trip");
 		btnNewButton.setOpaque(false);
 		btnNewButton.setFocusPainted(false);
@@ -60,7 +60,7 @@ public class WelcomeMenu {
 				ChoiceFrame CF = new ChoiceFrame();
 				CF.frame.setVisible(true);
 			}
-		});
+		});	
 		btnNewButton.setBackground(new Color(250, 250, 210));
 		btnNewButton.setForeground(new Color(250, 128, 114));
 		btnNewButton.setFont(new Font("Cooper Black", Font.PLAIN, 45));
@@ -106,7 +106,7 @@ public class WelcomeMenu {
 		btnClose.setBounds(379, 335, 321, 72);
 		btnClose.setVisible(true);
 		frame.getContentPane().add(btnClose);
-
+		
 		ImageIcon img2 = new ImageIcon("image/Okinawa.jpg");
 		JLabel lblNewLabel_1 = new JLabel("");
 		lblNewLabel_1.setIcon(img2);
