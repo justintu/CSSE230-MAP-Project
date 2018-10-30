@@ -1,5 +1,4 @@
 import java.awt.Color;
-import java.awt.EventQueue;
 import java.awt.Font;
 
 import javax.swing.ImageIcon;
@@ -11,28 +10,13 @@ public class ChoiceFrame {
 
 	JFrame frame;
 	SimulationPanel PS;
+	public String location1 = null;
+	public String location2 = null;
 
-	/**
-	 * Launch the application.
-	 */
-	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					ChoiceFrame window = new ChoiceFrame();
-					window.frame.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
-	}
 
-	/**
-	 * Create the application.
-	 */
 	public ChoiceFrame() {
 		initialize();
+		this.frame.setVisible(true);
 	}
 
 	/**
@@ -60,22 +44,22 @@ public class ChoiceFrame {
 		frame.getContentPane().add(dataPanel);
 		dataPanel.setLayout(null);
 
-		JLabel lblFirstLocation = new JLabel("First Location: ");
+		JLabel lblFirstLocation = new JLabel("From Location: ");
 		lblFirstLocation.setFont(new Font("Dialog", Font.PLAIN, 30));
 		lblFirstLocation.setBounds(12, 13, 263, 46);
 		dataPanel.add(lblFirstLocation);
 
-		JLabel lblSecondLocation = new JLabel("Second Location: ");
+		JLabel lblSecondLocation = new JLabel("To Location: ");
 		lblSecondLocation.setFont(new Font("Dialog", Font.PLAIN, 30));
 		lblSecondLocation.setBounds(12, 224, 263, 46);
 		dataPanel.add(lblSecondLocation);
 
-		JLabel variable1 = new JLabel("XXX");
+		JLabel variable1 = new JLabel(this.location1);
 		variable1.setFont(new Font("Dialog", Font.PLAIN, 30));
 		variable1.setBounds(12, 72, 246, 105);
 		dataPanel.add(variable1);
 
-		JLabel variable2 = new JLabel("YYY");
+		JLabel variable2 = new JLabel(this.location2);
 		variable2.setFont(new Font("Dialog", Font.PLAIN, 30));
 		variable2.setBounds(12, 306, 246, 105);
 		dataPanel.add(variable2);

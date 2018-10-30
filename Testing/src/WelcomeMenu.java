@@ -1,5 +1,4 @@
 import java.awt.Color;
-import java.awt.EventQueue;
 import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -17,24 +16,25 @@ public class WelcomeMenu {
 	/**
 	 * Launch the application.
 	 */
-	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					WelcomeMenu window = new WelcomeMenu();
-					window.frame.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
-	}
+//	public static void main(String[] args) {
+//		EventQueue.invokeLater(new Runnable() {
+//			public void run() {
+//				try {
+//					WelcomeMenu window = new WelcomeMenu();
+//					window.frame.setVisible(true);
+//				} catch (Exception e) {
+//					e.printStackTrace();
+//				}
+//			}
+//		});
+//	}
 
 	/**
 	 * Create the application.
 	 */
 	public WelcomeMenu() {
 		initialize();
+		this.frame.setVisible(true);
 	}
 
 	/**
@@ -58,7 +58,6 @@ public class WelcomeMenu {
 			public void actionPerformed(ActionEvent arg0) {
 				frame.setVisible(false);
 				ChoiceFrame CF = new ChoiceFrame();
-				CF.frame.setVisible(true);
 			}
 		});	
 		btnNewButton.setBackground(new Color(250, 250, 210));
