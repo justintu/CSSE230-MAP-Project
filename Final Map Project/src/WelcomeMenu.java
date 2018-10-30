@@ -1,5 +1,4 @@
 import java.awt.Color;
-import java.awt.EventQueue;
 import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -17,24 +16,25 @@ public class WelcomeMenu {
 	/**
 	 * Launch the application.
 	 */
-	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					WelcomeMenu window = new WelcomeMenu();
-					window.frame.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
-	}
+//	public static void main(String[] args) {
+//		EventQueue.invokeLater(new Runnable() {
+//			public void run() {
+//				try {
+//					WelcomeMenu window = new WelcomeMenu();
+//					window.frame.setVisible(true);
+//				} catch (Exception e) {
+//					e.printStackTrace();
+//				}
+//			}
+//		});
+//	}
 
 	/**
 	 * Create the application.
 	 */
 	public WelcomeMenu() {
 		initialize();
+		this.frame.setVisible(true);
 	}
 
 	/**
@@ -47,7 +47,7 @@ public class WelcomeMenu {
 		frame.getContentPane().setBackground(new Color(255, 255, 224));
 		frame.getContentPane().setLayout(null);
 		frame.setLocationRelativeTo(null);
-
+		
 		JButton btnNewButton = new JButton("Start Trip");
 		btnNewButton.setOpaque(false);
 		btnNewButton.setFocusPainted(false);
@@ -58,9 +58,8 @@ public class WelcomeMenu {
 			public void actionPerformed(ActionEvent arg0) {
 				frame.setVisible(false);
 				ChoiceFrame CF = new ChoiceFrame();
-				CF.frame.setVisible(true);
 			}
-		});
+		});	
 		btnNewButton.setBackground(new Color(250, 250, 210));
 		btnNewButton.setForeground(new Color(250, 128, 114));
 		btnNewButton.setFont(new Font("Cooper Black", Font.PLAIN, 45));
@@ -106,7 +105,7 @@ public class WelcomeMenu {
 		btnClose.setBounds(379, 335, 321, 72);
 		btnClose.setVisible(true);
 		frame.getContentPane().add(btnClose);
-
+		
 		ImageIcon img2 = new ImageIcon("image/Okinawa.jpg");
 		JLabel lblNewLabel_1 = new JLabel("");
 		lblNewLabel_1.setIcon(img2);
